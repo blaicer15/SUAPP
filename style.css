@@ -1,0 +1,130 @@
+body{
+background-color: #F4F0F0;
+margin-top: 15px;
+}
+#box{
+	border: 1px solid #00a3cc;
+	border-radius: 20px;
+	background-color:  	white; 
+	margin-top: 50px;
+}
+#box2{
+	
+	background-color:  	white;
+	padding: 0 auto;
+	display: none;	
+}
+#box3{
+	border: 1px solid #00a3cc;
+	border-radius: 0px;
+	background-color:  	white; 
+	margin-top: 25px;
+	box-shadow: 0 0 50px 0px gray;
+}
+.ico{
+	float: right;
+}
+.arr{
+	float: right;
+}
+.arrr{
+	margin-top: -2px;
+	float: right;
+}
+.top{
+	margin-top: -10px;
+}
+thead{
+	color: gray;
+}
+legend > h1{
+	font-size: 30px;
+	margin-left: 10px;
+}
+input{
+	margin-top: -10px;
+}
+form{
+	background-color: ;
+	border-radius: 20px;
+}
+button{
+	margin: 5px auto;
+	float: right;
+}
+h1{
+	color: white;
+	margin-top: 5px; 
+	margin-top: -10px;
+}
+.col{
+	color: black;
+}
+#font{
+	background-color: #00a3cc;
+	border-radius: 5px;
+}
+#font1{
+	background-color: #00a3cc;
+	border-radius: 0px;
+}
+select{
+	background-color: ;
+	color: black;
+}
+#color{
+	background-color: #00a3cc;
+	color: white;
+	float: right;
+}
+h3{
+	color: #00a3cc;
+}
+#form{
+	width: 100px;
+	border: 1px solid #777;
+	padding: 10px;
+}
+.fil{
+	margin-left: 20px;
+}
+.sel{
+	margin-top: -10px;
+}
+.us{
+	padding-top: 20px;
+}
+h4{
+	padding-left: 20px;
+}
+.boton{
+	float: left;
+	margin-top: -10px;	
+	margin-left: 10px;
+}
+.boton2{
+	float: left;
+}
+.boton3{
+	float: right;
+}
+.search > i{
+	position: absolute;
+    right: 0px;
+    pointer-events: none;
+    padding-right: 30px;
+    padding-top: -20px;
+}
+.bet{
+	margin-top: -5px;
+}
+.ab{
+	margin-top: 10px;
+}
+.container{
+	background-color:#B0B0B0;
+}
+label{
+	padding-bottom: 10px;
+}
+

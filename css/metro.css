@@ -1,0 +1,99 @@
+<style type="text/css">
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .layout {
+      position: absolute;
+      right: 0px;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      padding: 15px;
+      overflow-y: auto;
+    }
+    .header {
+      height: 100%;
+    }
+    .free-wall {
+      width: 100%;
+      height: 100%;
+    }
+
+    @keyframes start {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
+
+    @-webkit-keyframes start {
+      from { -webkit-transform: scale(0);}
+      to { -webkit-transform: scale(1);}
+    }
+
+    .free-wall .brick[data-state="init"] {
+      display: none;
+    }
+
+    .free-wall .brick[data-state="start"]  {
+      display: block;
+      animation: start 0.5s;
+      -webkit-animation: start 0.5s;
+    }
+
+    .free-wall .brick[data-state="move"]  {
+      transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s;
+      -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s;
+    }
+    .s1x1 {
+      height: 320px;
+      width: 260px;
+    }
+    .slt {
+      width: 160px;
+      height: 200px;
+    }
+    .rh {
+      width: 260px;
+      height: 120px;
+    }
+    .cv {
+      width: 320px;
+      height: 160px;
+    }
+    .apro {
+      height: 320px;
+      width: 320px;
+    }
+    .est {
+      width: 250px;
+      height: 320px;
+    }
+
+    .ins {
+      width: 260px;
+      height: 160px;
+    }
+    .rf {
+      width: 400px;
+      height: 160px;
+    }
+    .s2x4 {
+      width: 320px;
+      height: 640px;
+    }
+    .vpro {
+      width: 320px;
+      height: 320px;
+    }
+    .s3x3 {
+      width: 480px;
+      height: 480px;
+    }
+    .cover {
+      text-align: center;
+      vertical-align: middle;
+      color: #2E2E2E;
+    }
+  </style>
