@@ -3,7 +3,8 @@
 				'rh.php' => 'Rercursos Financieros',
 				'institucion.php' => 'Institucion',
 				'recursoshumanos.php' => 'Recursos Humanos',
-				'resbar.php' => 'Salio bien'
+				'resbar.php' => 'Salio bien',
+				''=>''
 			);
 	if ($file != null) {
 		$file2 = "<a href='' title=''>$perro[$file]</a>";

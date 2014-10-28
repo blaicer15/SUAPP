@@ -18,11 +18,11 @@ include "conect.php";
 				var id = $(this).val();
 				if(id != ""){
 					$.getJSON('query_inst.php',{id: id},function(json,status){
-						$("#clave_inst").val(json.clave_inst);
-						$("#direccion_inst").val(json.direccion_inst);
-						$("#email_inst").val(json.email_inst);
-						$("#nombre_dir").val(json.nombre_dir);
-						$("#email_dir").val(json.email_dir);
+						$("#clave_inst").text(json.clave_inst);
+						$("#direccion_inst").text(json.direccion_inst);
+						$("#email_inst").text(json.email_inst);
+						$("#nombre_dir").text(json.nombre_dir);
+						$("#email_dir").text(json.email_dir);
 						console.log(json);
 					});
 				}
@@ -81,15 +81,20 @@ include "conect.php";
 
 			<div id="formulario" class="control-group" >
 			<br>
-			<input class="form-control" id="clave_inst" name="clave_inst" placeholder="Clave de la Institutción" type="text" disabled="off" />
+			<!--<input class="form-control" id="clave_inst" name="clave_inst" placeholder="Clave de la Institutción" type="text" disabled="off" />-->
+			<p id="clave_inst" name="clave_inst"></p>
 			<br>	
-			<textarea class="form-control" id="direccion_inst" name="direccion_inst" placeholder="Dirección" type="text" disabled="off" /></textarea>
+			<!--<textarea class="form-control" id="direccion_inst" name="direccion_inst" placeholder="Dirección" type="text" disabled="off" /></textarea>-->
+			<p id="direccion_inst" name="direccion_inst"></p>
 			<br>
-			<input class="form-control" id="email_inst" name="email_inst" placeholder="Correo electr&oacute;nico" type="email" disabled="off" />
+			<!--<input class="form-control" id="email_inst" name="email_inst" placeholder="Correo electr&oacute;nico" type="email" disabled="off" />-->
+			<p id="email_inst" name="email_inst"></p>
 			<br>
-			<input class="form-control" id="nombre_dir" name="nombre_dir" placeholder="Nombre del director" type="text" disabled="off" />
+			<!--<input class="form-control" id="nombre_dir" name="nombre_dir" placeholder="Nombre del director" type="text" disabled="off" />-->
+			<p id="nombre_dir" name="nombre_dir"></p>
 			<br>
-			<input class="form-control" id="email_dir" name="email_dir" placeholder="Correo del Director" type="email" disabled="off"/>		
+			<!--<input class="form-control" id="email_dir" name="email_dir" placeholder="Correo del Director" type="email" disabled="off"/>-->
+			<p id="email_dir" name="email_dir"></p>
 			<br>
 			<button class="btn btn-lg " id="color" type="submit" href="saveinst.php" name="btnguardar"><i class="fa fa-floppy-o"></i> Guardar</button>
 

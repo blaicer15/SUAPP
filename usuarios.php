@@ -99,7 +99,7 @@ if (isset($_POST['btnguardar'])){
 									<a onclick="informacion()" class="btn btn-success boton" name="btnadd">Ver Usuarios</a>
 								</div>
 								<div class="col-md-6">
-									<button class="btn btn-lg" id="color" type="submit" href="usuarios.php" name="btnguardar">Guardar</button>
+									<button class="btn btn-lg" id="color" type="submit" href="usuarios.php" name="btnguardar"><i class="fa fa-floppy-o"></i>&nbsp;Guardar</button>
 									<br>
 								</div>
 							</div>

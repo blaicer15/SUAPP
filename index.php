@@ -49,7 +49,7 @@
         </a>
 
 
-        <a href="formulariocv.php">
+        <a href="CV.php">
         <div class='brick cv' style='background-color: rgb(30,144,255)'>
           <div class='cover'>
             <h1>Curriculum Vitae</h1>
@@ -156,9 +156,6 @@
         //wall.fitZone($(window).width() - 30 , $(window).height() - 30);
         //wall.fitHeight();
       });
-    </script>
-    <script type="text/css">
-    	
     </script>
   </body>
   </html>
