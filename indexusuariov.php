@@ -1,16 +1,3 @@
-﻿<?php
-session_start();
-include "conect.php";
-$user = $_SESSION['user'];
-
-include "sesion.php";
-
-$query= "SELECT * FROM usuarios WHERE nombre='$user'";
-  $res=pg_query($query);
-  $nom=pg_fetch_assoc($res);
-  $name=$nom['nombre'];
-    
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,93 +16,65 @@ $query= "SELECT * FROM usuarios WHERE nombre='$user'";
 </head>
 
 <body class="container">
-  <!--<div class="layout">
-  </div>-->
-      <?php include "barra.php"; ?>
+  <div class="layout">
+    <!--Aqui inicia la barra-->
+    <div class="navbar">
+      <div class="navbar-inner"  style='background-color: rgb(0, 163, 204)'>
+        <div class="container-fluid">
+          <a href="index.php" class="brand">
+            <small>
+              <i class="icon-bar-chart"></i>
+              <b>SUAP</b>
+            </small>
+          </a>
+        </div><!--/.container-fluid-->
+      </div>
+      <!--/.navbar-inner--><br><br>
+      <!--Aqui termina la barra-->
+      <!--Inician el menu tipo Windows 8, cada div con id="freewall" es un modulo-->
+      <br><br>
       <div id="freewall" class="free-wall">
-
-        <a href="proyecto.php">
-        <div class='brick s2x2' style='background-color: rgb(241, 196, 15)' data-fixSize=true>
-          <div class='cover'>
-            <h1><br><br>Agregar Proyectos</h1>
-            <i class="fa fa-file-text fa-5x"></i>
-          </div>
-        </div>
-        </a>
         
-        <a href="recursoshumanos.php">
-        <div class='brick s2x1' style='background-color: #ff5c00'>
-            <div class='cover'>
-              <h1>Recursos Humanos</h1>
-              <i class="fa fa-male fa-5x"></i><i class="fa fa-female fa-5x"></i>
-            </div>
-         </div>
-        </a>
-        
-        <a href="formulariocv.php">
-        <div class='brick s2x1' style='background-color: #913dff'>
+        <a href="">
+        <div class='brick s1x3' style='background-color: #913dff'>
           <div class='cover'>
-            <h1>Curriculum Vitae</h1>
-            <i class="fa fa-graduation-cap fa-5x"></i>
+            <h1><br><br><br><br>Estadísticas</h1>
+            <i class="fa fa-bar-chart-o fa-5x"></i>
           </div>
         </div>
         </a>
         
         <a href="">
-        <div class='brick s2x2' style='background-color: rgb(0,206,209)'>
-          <div class='cover'>
-            <h1><br><br>Información Extra</h1>
-            <i class="fa fa-plus fa-5x"></i>
-          </div>
-        </div>
-        </a>
-
-        <a href="">
-          <div class='brick s2x1' style='background-color: #a0a395'>        
+          <div class='brick s1x3' style='background-color: rgb(255,140,0)'>        
             <div class='cover'>
-              <h1>Línea del Tiempo</h1>
-              <i class="fa fa-line-chart fa-4x"></i>
+              <h1><br><br><br><br>Línea del Tiempo</h1>
+              <i class="fa fa-line-chart fa-5x"></i>
             </div>
           </div>
         </a>
 
         <a href="">
-        <div class='brick s2x2' style='background-color: rgb(50,205,50)'>
+        <div class='brick s1x3' style='background-color: rgb(50,205,50)'>
           <div class='cover'>
-            <h1><br><br>Ver proyectos</h1>
+            <h1><br><br><br><br>Ver proyectos</h1>
             <i class="fa fa-search fa-5x"></i> 
           </div>
         </div>
         </a>
 
-        <a href="institucion.php">
-          <div class='brick s2x1' style='background-color: rgb(14, 239, 119)'>
-            <div class='cover'>
-              <h1>Instituciones</h1>
-              <i class="fa fa-institution fa-4x"></i>
-            </div>
-          </div>
-        </a>  
-
-        <a href="rh.php">
-          <div class='brick s2x1' style='background-color: rgb(30,144,255)'>        
-            <div class='cover'>
-              <h1>Recursos Financieros</h1>
-              <i class="fa fa-dollar fa-3x"></i>
-            </div>
-          </div>
-        </a>
-
         <a href="">
-        <div class='brick s2x1' style='background-color: #ccff17'>
+        <div class='brick s1x3' style='background-color: rgb(253,105,50)'>
           <div class='cover'>
-            <h1>Estadísticas</h1>
-            <i class="fa fa-bar-chart-o fa-4x"></i>
+            <h1><br><br><br><br>Usuarios</h1>
+            <i class="fa fa-users fa-5x"></i> 
           </div>
         </div>
         </a>
-          
+
         </div>
+        </div>
+
+        <div class="">
         </div>
 
     <script type="text/javascript">

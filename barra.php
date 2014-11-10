@@ -12,6 +12,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="index.php">Inicio</a></li>
 			<li><?php echo $file2; ?></li>
+			<li><a href="logout.php">cerrar sesion</a></li>
 		</ul>
 	</nav>
 </div>
@@ -27,5 +28,8 @@
 	}
 	.navbar-brand, .navbar-toggle{
 		color: #FFFFFF;
+	}
+	.container{
+		width: 1300px;
 	}
 </style>

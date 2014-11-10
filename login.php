@@ -52,7 +52,6 @@ if (isset($_POST['entrar'])) {
 		header("Location: index.php?id=$user"); 
 	}
 	?>
-
 	<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -65,6 +64,7 @@ if (isset($_POST['entrar'])) {
 		<script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/search.js"></script>
 		<script src="js/site.js"></script>
+		<script src="js/modal.js"></script>
 
 	</head>
 	<body class="container">
@@ -73,7 +73,7 @@ if (isset($_POST['entrar'])) {
 			<div id="" align="center">
 				<img src="user.png" class="img-circle" >
 			</div>
-			<form action="login.php" accept-charset="utf-8" method="post" id="formulario" class="form" role="form">
+			<form action="login.php " accept-charset="utf-8" method="post" id="formulario" class="form" role="form">
 				<div class="row">
 					<div class="col-md-12">
 						<br>
@@ -81,16 +81,38 @@ if (isset($_POST['entrar'])) {
 						<br>
 						<input class="form-control" type="password" id="pass" name="pass" placeholder="Contraseña" />
 						<br>
-						<div class="col-md-12 well-md">
-							<button class="btn btn-lg btn-primary btn-block" type="submit" href="#" name="entrar">Iniciar Sesión</button>
-							<button type="button"  href="" class="btn btn-link btn-block">¿Olvidaste tu contraseña?</button>				
-						</div>
-						<br><br>
 					</div>
-
+						<div class="col-md-12 well-md">
+							<button class="btn btn-lg btn-primary btn-block" type="submit" name="entrar">Iniciar Sesión</button>
+							<a type="button" data-toggle="modal" data-target="#window" name ="btnadd">¿Olvido su contraseña?</a>
+						</div>
 				</div>
-			</form>		
-		</div>
+			</form>
+			
+				<div class="modal fade" id="window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
 
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h3>Proporcione el mismo correo que uso por primera vez</h3>
+						</div>
+
+						<form enctype="multipart/form-data" action="correo.php" method="post" id="form2" accept-charset="UTF-8">
+						<div class="modal-body">
+							<input class="form-control" name="email" id="email" placeholder="Introduzca aquí su correo" type="text" required/>		
+							<br>
+						</div>
+
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-success" value="send" title="Enviar"><i class="fa fa-floppy-o"></i> Enviar</button>
+						</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	
 	</body>
 	</html>

@@ -47,43 +47,43 @@
       -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s;
     }
     .s1x1 {
-      height: 320px;
-      width: 260px;
-    }
-    .slt {
       width: 160px;
-      height: 200px;
-    }
-    .rh {
-      width: 260px;
-      height: 120px;
-    }
-    .cv {
-      width: 320px;
       height: 160px;
     }
-    .apro {
+    .s1x2{
+      width: 160px;
       height: 320px;
+    }
+    .s2x1{
+      width: 340px;
+      height: 160px;
+    }
+    .s2x2 {
+      width: 320px;
+      height: 320px;
+    }
+    .s1x3 {
+      height: 480px;
       width: 320px;
     }
-    .est {
-      width: 250px;
-      height: 320px;
+    .s3x1 {
+      width: 480px;
+      height: 160px;
     }
 
-    .ins {
-      width: 260px;
-      height: 160px;
-    }
-    .rf {
-      width: 400px;
-      height: 160px;
+    .s2x3 {
+      width: 320px;
+      height: 480px;
     }
     .s2x4 {
       width: 320px;
       height: 640px;
     }
-    .vpro {
+    .s3x2 {
+      width: 480px;
+      height: 320px;
+    }
+    .s2x2 {
       width: 320px;
       height: 320px;
     }
