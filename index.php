@@ -5,7 +5,7 @@ $user = $_SESSION['user'];
 
 include "sesion.php";
 
-$query= "SELECT * FROM usuarios WHERE nombre='$user'";
+  $query= "SELECT * FROM usuarios WHERE nombre='$user'";
   $res=pg_query($query);
   $nom=pg_fetch_assoc($res);
   $name=$nom['nombre'];
@@ -31,7 +31,10 @@ $query= "SELECT * FROM usuarios WHERE nombre='$user'";
 <body class="container">
   <!--<div class="layout">
   </div>-->
-      <?php include "barra.php"; ?>
+      <?php
+      include "barra.php";
+      ?>
+      
       <div id="freewall" class="free-wall">
 
         <a href="proyecto.php">

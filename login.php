@@ -35,11 +35,7 @@ if (isset($_POST['entrar'])) {
 			if ($num==0)
 			{
 				echo "<script language='JavaScript' type='text/javascript'> alert('Usuario y/o contraseña incorrectos ?')</script>";
-				
-
-
 			}
-
 
 		}
 	}
@@ -73,7 +69,7 @@ if (isset($_POST['entrar'])) {
 			<div id="" align="center">
 				<img src="user.png" class="img-circle" >
 			</div>
-			<form action="login.php " accept-charset="utf-8" method="post" id="formulario" class="form" role="form">
+			<form action="login.php" accept-charset="utf-8" method="post" id="formulario" class="form" role="form">
 				<div class="row">
 					<div class="col-md-12">
 						<br>
@@ -81,11 +77,12 @@ if (isset($_POST['entrar'])) {
 						<br>
 						<input class="form-control" type="password" id="pass" name="pass" placeholder="Contraseña" />
 						<br>
-					</div>
 						<div class="col-md-12 well-md">
 							<button class="btn btn-lg btn-primary btn-block" type="submit" name="entrar">Iniciar Sesión</button>
-							<a type="button" data-toggle="modal" data-target="#window" name ="btnadd">¿Olvido su contraseña?</a>
+							<!--<a type="button" data-toggle="modal" data-target="#window" name ="btnadd">¿Olvido su contraseña?</a>-->
+							<button type="button" class="btn btn-link btn-blok"name ="btnadd" data-target="#window" data-toggle="modal" >¿Olvido su contraseña?</button>
 						</div>
+					</div>
 				</div>
 			</form>
 			

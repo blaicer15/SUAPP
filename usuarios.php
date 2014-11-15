@@ -1,29 +1,5 @@
 <?php 
 include "conect.php";
-
-if (isset($_POST['btnguardar'])){
-	$nombre=htmlspecialchars($_POST['nombre'],ENT_QUOTES);
-	$usuario=htmlspecialchars($_POST['usuario'],ENT_QUOTES);
-	$correo=htmlspecialchars($_POST['correo'],ENT_QUOTES);
-	$pass=htmlspecialchars($_POST['pass'],ENT_QUOTES);
-	$optionsRadios=htmlspecialchars($_POST['optionsRadios'],ENT_QUOTES);
-
-	$query="SELECT * FROM usuarios WHERE usuario='$usuario'";
-	$res=pg_query($query);
-	$num =pg_num_rows($res);
-	if ($num==0){
-		$query2= "INSERT INTO usuarios(nombre, usuario, correo, pass, rol)
-		VALUES('$nombre','$usuario','$correo','$pass','$optionsRadios')";
-
-		$res=pg_query($query2);
-		echo "<script language='JavaScript' type='text/javascript'> alert('Usuario registrado correctamente')</script>";
-
-	}
-	else{
-		echo "<script language='JavaScript' type='text/javascript'> alert('Este nombre de usuario ya esta registrado, porfavor elige otro')</script>";		
-
-	}
-}
 ?>
 <html>
 <head>
@@ -58,7 +34,7 @@ if (isset($_POST['btnguardar'])){
 					<h1 align="center"><b><i class="fa fa-users"></i> Registro de usuarios</b></h1>
 				</legend>
 			</div>
-			<form action="usuarios.php" accept-charset="utf-8" method="post" id="formulario" class="form" role="form">
+			<form action="resusuario.php" accept-charset="utf-8" method="post" id="formulario" class="form" role="form">
 				<div class="row">
 					<div class="col-md-12">
 						<div id="#" class="col-md-10 col-md-offset-1">
@@ -88,7 +64,7 @@ if (isset($_POST['btnguardar'])){
 								</div>
 								<div class="radio col-md-4">
 									<label>
-										<input type="radio" name="optionsRadios" id="option3" value="3">
+										<input type="radio" name="optionsRadios" id="option3" value="3" checked="true">
 										Visualizador
 									</label>
 								</div>
@@ -99,7 +75,7 @@ if (isset($_POST['btnguardar'])){
 									<a onclick="informacion()" class="btn btn-success boton" name="btnadd">Ver Usuarios</a>
 								</div>
 								<div class="col-md-6">
-									<button class="btn btn-lg" id="color" type="submit" href="usuarios.php" name="btnguardar"><i class="fa fa-floppy-o"></i>&nbsp;Guardar</button>
+									<button class="btn btn-lg" id="color" type="submit" href="resusuario.php" name="btnguardar"><i class="fa fa-floppy-o"></i>&nbsp;Guardar</button>
 									<br>
 								</div>
 							</div>
@@ -115,47 +91,5 @@ if (isset($_POST['btnguardar'])){
 
 	</div>
 </center>
-
-
-
-<!--<form action="usuarios.php" accept-charset="utf-8" method="post" id="formulario" class="form" role="form">
-	<div class="modal fade" id="window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h3><center><b>Usuarios de SUAP</b></center></h3>
-				</div>
-
-				<div class="modal-body">
-					<div id="formulario" class="control-group">-->
-<!--<div class="table-responsive">
-					<table class="table table-bordered table-hover table-list-search">
-						
-						
-
-						<tbody>
-													
-						</tbody>
-					</table>
-
-				</div>	-->
-
-
-
-
-
-
-				<!--</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	
-</form>-->
-
 </body>
 </html>
